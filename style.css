@@ -262,7 +262,6 @@ nav ul li a {
     top: 20px;
 }
 
-/*gpt 참고했음 -> header가 더 큰 영역이라 :has 사용해주어야 함*/
 header:has(.language:hover),
 header:has(.login-btn:hover) {
     background: #fff;
@@ -297,7 +296,6 @@ header:has(.login-btn:hover) {
     color: #666;
 }
 
-/*main-visual section*/
 .main-visual {
     background: #f3f1f0;
     padding-top: 80px;
@@ -459,7 +457,6 @@ header:has(.login-btn:hover) {
     flex-shrink:0;
 }
 
-/* pause 상태 */
 .main-play::before,
 .main-play::after{
     content:'';
@@ -478,7 +475,6 @@ header:has(.login-btn:hover) {
     right:6px;
 }
 
-/* play 상태 */
 .main-play.paused::before{
     left:50%;
     transform:translateX(-35%);
@@ -605,7 +601,6 @@ header:has(.login-btn:hover) {
         rotate(45deg);
 }
 
-/* model section */
 .model {
     padding: 80px 0;
     min-height: calc(100vh - 80px);
@@ -744,11 +739,6 @@ header:has(.login-btn:hover) {
     font-weight: 700;
 }
 
-/*electric-car section*/
-/* =========================
-   electric-car section
-========================= */
-
 .electric-car {
     padding-top: 80px;
     min-height: calc(100vh - 80px);
@@ -758,10 +748,6 @@ header:has(.login-btn:hover) {
     display: flex;
     gap: 20px;
 }
-
-/* =========================
-   left
-========================= */
 
 .elec-car-left {
     width: 65%;
@@ -826,10 +812,6 @@ header:has(.login-btn:hover) {
     border-top: 3px solid #fff;
     border-right: 3px solid #fff;
 }
-
-/* =========================
-   bottom info
-========================= */
 
 .elec-car-info {
     display: flex;
@@ -899,10 +881,6 @@ header:has(.login-btn:hover) {
     display:block;
 }
 
-/* =========================
-   right slider
-========================= */
-
 .elec-car-right {
     width: 35%;
     flex: 0 0 35%;
@@ -913,15 +891,11 @@ header:has(.login-btn:hover) {
     padding: 40px 0px 30px;
 }
 
-/* track */
-
 .elec-car-track {
     display: flex;
     width: 100%;
     transition: transform .5s ease;
 }
-
-/* card */
 
 .car-card {
     width: 100%;
@@ -931,8 +905,6 @@ header:has(.login-btn:hover) {
     box-sizing: border-box;
 }
 
-/* title */
-
 .car-card h3 {
     text-align: center;
     font-size: 30px;
@@ -941,7 +913,6 @@ header:has(.login-btn:hover) {
     color: #000;
 }
 
-/* thumbnail */
 .nexo-thumb{
     display:flex;
     justify-content:center;
@@ -953,8 +924,6 @@ header:has(.login-btn:hover) {
     max-width: 100%;
     height: auto;
 }
-
-/* info */
 
 .thumb-info {
     margin-top: 15px;
@@ -982,16 +951,12 @@ header:has(.login-btn:hover) {
     text-align: right;
 }
 
-/* line */
-
 .elec-car-right-line {
     width: 100%;
     height: 1px;
     margin-top: 18px;
     background: #ccc;
 }
-
-/* build button */
 
 .build-btn,
 .elec-car-right a {
@@ -1008,10 +973,6 @@ header:has(.login-btn:hover) {
     letter-spacing: -.4px;
     text-align: center;
 }
-
-/* =========================
-   slider arrows
-========================= */
 
 .elec-prev,
 .elec-next {
@@ -1036,10 +997,6 @@ header:has(.login-btn:hover) {
     right: 0;
 }
 
-/* =========================
-   slider dots
-========================= */
-
 .elec-dots {
     display: flex;
     justify-content: center;
@@ -1061,7 +1018,6 @@ header:has(.login-btn:hover) {
     background: #009ad6;
 }
 
-/*trendy*/
 .trendy {
     padding-top: 80px;
     min-height: calc(100vh - 80px);
@@ -1117,7 +1073,6 @@ header:has(.login-btn:hover) {
     width: 65%;
 }
 
-/*shop section*/
 .shop {
     padding-top: 80px;
     min-height: calc(100vh - 80px);
@@ -1246,7 +1201,6 @@ header:has(.login-btn:hover) {
     font-size: 22px;
 }
 
-/*brand section*/
 .brand {
     padding-top: 80px;
     min-height: calc(100vh - 80px);
@@ -1320,7 +1274,6 @@ header:has(.login-btn:hover) {
     opacity: 1;
 }
 
-/*event section*/
 .event{
     padding-top:80px;
     min-height:calc(100vh - 80px);
@@ -1500,7 +1453,6 @@ header:has(.login-btn:hover) {
     background:#009ad6;
 }
 
-/*hyundai-news section*/
 .hyundai-news {
     padding-top: 80px;
     min-height: calc(100vh - 80px);
@@ -1676,8 +1628,6 @@ header:has(.login-btn:hover) {
     color: #fff;
     border: 2px solid #fff;
 }
-
-/*footer*/
 
 .footer .inner {
     max-width: 1680px;
@@ -1934,7 +1884,6 @@ header:has(.login-btn:hover) {
     max-width: 220px;
 }
 
-/*픽시드 하단 고정 버튼*/
 .floating-menu{
     position:fixed;
     right:24px;

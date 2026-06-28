@@ -10,10 +10,6 @@ window.addEventListener("scroll",function(){
 
 });
 
-/* =========================
-   MAIN VISUAL SLIDER
-========================= */
-
 document.addEventListener("DOMContentLoaded", () => {
 
     const slides = document.querySelectorAll('.main-visual .slide');
@@ -206,10 +202,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-/* =========================
-   ELECTRIC CAR SLIDER PC
-========================= */
-
 document.addEventListener('DOMContentLoaded', () => {
 
     if (window.innerWidth <= 768) return;
@@ -320,11 +312,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-
-/* =========================
-   EVENT SECTION SLIDER
-========================= */
-
 document.addEventListener("DOMContentLoaded", () => {
 
     const eventWrap = document.querySelector(".event-list");
@@ -338,19 +325,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let currentIndex = 0;
 
-    /* =========================
-       모바일 여부
-    ========================= */
-
     function isMobile(){
 
         return window.innerWidth <= 768;
 
     }
-
-    /* =========================
-       보여줄 개수
-    ========================= */
 
     function getVisibleCount(){
 
@@ -358,19 +337,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    /* =========================
-       최대 index
-    ========================= */
-
     function getMaxIndex(){
 
         return Math.ceil(items.length / getVisibleCount()) - 1;
 
     }
-
-    /* =========================
-       버튼 생성
-    ========================= */
 
     const prevBtn = document.createElement("button");
     const nextBtn = document.createElement("button");
@@ -383,10 +354,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     eventWrap.appendChild(prevBtn);
     eventWrap.appendChild(nextBtn);
-
-    /* =========================
-       dots 생성
-    ========================= */
 
     const dotsWrap = document.createElement("div");
 
@@ -421,10 +388,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     }
-
-    /* =========================
-       슬라이드 이동
-    ========================= */
 
     function updateSlide(){
 
@@ -464,10 +427,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    /* =========================
-       이전 버튼
-    ========================= */
-
     prevBtn.addEventListener("click", () => {
 
         currentIndex--;
@@ -482,10 +441,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    /* =========================
-       다음 버튼
-    ========================= */
-
     nextBtn.addEventListener("click", () => {
 
         currentIndex++;
@@ -499,10 +454,6 @@ document.addEventListener("DOMContentLoaded", () => {
         updateSlide();
 
     });
-
-    /* =========================
-       모바일 터치 슬라이드
-    ========================= */
 
     let startX = 0;
 
@@ -551,10 +502,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    /* =========================
-       resize 대응
-    ========================= */
-
     window.addEventListener("resize", () => {
 
         currentIndex = 0;
@@ -569,16 +516,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-
-/* =========================================
-   MOBILE RESPONSIVE
-========================================= */
-
 document.addEventListener("DOMContentLoaded", () => {
 
     if (window.innerWidth > 1200) return;
-
-    /* MODEL SECTION */
 
     const model = document.querySelector(".model");
 
@@ -660,7 +600,6 @@ document.addEventListener("DOMContentLoaded", () => {
                      currentIndex = index;
                      render(currentIndex);
 
-
                 });
 
             });
@@ -696,9 +635,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-
-    /* ELECTRIC CAR MOBILE */
-
     const elecWrap = document.querySelector(".elec-car-right");
 
     if(elecWrap && !elecWrap.querySelector('.elec-car-track')){
@@ -712,8 +648,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             cards.forEach((card) => {
 
-    track.appendChild(card);
-});
+                track.appendChild(card);
+
+            });
 
             elecWrap.appendChild(track);
 
@@ -790,32 +727,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-/* =========================
-   BRAND SLIDER
-========================= */
-
 document.addEventListener("DOMContentLoaded", () => {
 
     if(window.innerWidth > 1200) return;
 
-    const brand =
-        document.querySelector(".brand");
+    const brand = document.querySelector(".brand");
 
     if(!brand) return;
 
-    const track =
-        brand.querySelector("ul");
-
-    const items =
-        [...track.querySelectorAll("li")];
+    const track = brand.querySelector("ul");
+    const items = [...track.querySelectorAll("li")];
 
     if(!track || !items.length) return;
 
     let currentIndex = 0;
-
-    /* =========================
-       visible count
-    ========================= */
 
     function getVisibleCount(){
 
@@ -823,46 +748,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    /* =========================
-       max index
-    ========================= */
-
     function getMaxIndex(){
 
-        return Math.ceil(
-            items.length / getVisibleCount()
-        ) - 1;
+        return Math.ceil(items.length / getVisibleCount()) - 1;
 
     }
 
-    /* =========================
-       버튼 생성
-    ========================= */
+    const prevBtn = document.createElement("button");
+    const nextBtn = document.createElement("button");
 
-    const prevBtn =
-        document.createElement("button");
-
-    const nextBtn =
-        document.createElement("button");
-
-    prevBtn.className =
-        "brand-prev";
-
-    nextBtn.className =
-        "brand-next";
+    prevBtn.className = "brand-prev";
+    nextBtn.className = "brand-next";
 
     brand.appendChild(prevBtn);
     brand.appendChild(nextBtn);
 
-    /* =========================
-       dots 생성
-    ========================= */
-
-    const dotsWrap =
-        document.createElement("div");
-
-    dotsWrap.className =
-        "brand-dots";
+    const dotsWrap = document.createElement("div");
+    dotsWrap.className = "brand-dots";
 
     function createDots(){
 
@@ -870,8 +772,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         for(let i = 0; i <= getMaxIndex(); i++){
 
-            const dot =
-                document.createElement("button");
+            const dot = document.createElement("button");
 
             if(i === currentIndex){
 
@@ -895,12 +796,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     createDots();
 
-    brand.querySelector(".inner")
-        .appendChild(dotsWrap);
-
-    /* =========================
-       슬라이드 이동
-    ========================= */
+    brand.querySelector(".inner").appendChild(dotsWrap);
 
     function updateSlide(){
 
@@ -908,29 +804,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if(window.innerWidth <= 768){
 
-            moveX =
-                items[0].offsetWidth *
-                currentIndex;
+            moveX = items[0].offsetWidth * currentIndex;
 
         }else{
 
-            const itemWidth =
-                items[0].offsetWidth;
-
+            const itemWidth = items[0].offsetWidth;
             const gap = 24;
 
-            moveX =
-                (itemWidth + gap) *
-                currentIndex *
-                getVisibleCount();
+            moveX = (itemWidth + gap) * currentIndex * getVisibleCount();
 
         }
 
-        track.style.transform =
-            `translateX(-${moveX}px)`;
+        track.style.transform = `translateX(-${moveX}px)`;
 
-        const dots =
-            dotsWrap.querySelectorAll("button");
+        const dots = dotsWrap.querySelectorAll("button");
 
         dots.forEach(dot => {
 
@@ -940,16 +827,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if(dots[currentIndex]){
 
-            dots[currentIndex]
-                .classList.add("active");
+            dots[currentIndex].classList.add("active");
 
         }
 
     }
-
-    /* =========================
-       prev
-    ========================= */
 
     prevBtn.addEventListener("click", () => {
 
@@ -957,18 +839,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if(currentIndex < 0){
 
-            currentIndex =
-                getMaxIndex();
+            currentIndex = getMaxIndex();
 
         }
 
         updateSlide();
 
     });
-
-    /* =========================
-       next
-    ========================= */
 
     nextBtn.addEventListener("click", () => {
 
@@ -984,10 +861,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    /* =========================
-       resize
-    ========================= */
-
     window.addEventListener("resize", () => {
 
         currentIndex = 0;
@@ -1001,10 +874,6 @@ document.addEventListener("DOMContentLoaded", () => {
     updateSlide();
 
 });
-
-/* =========================
-   QUICK MENU PC
-========================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -1049,17 +918,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-/* =========================
-   FOOTER TOGGLE
-========================= */
-
 document.addEventListener("DOMContentLoaded", () => {
 
-    const footerBtn =
-        document.querySelector(".footer-toggle-btn");
-
-    const footerContent =
-        document.querySelector(".footer-toggle-content");
+    const footerBtn = document.querySelector(".footer-toggle-btn");
+    const footerContent = document.querySelector(".footer-toggle-content");
 
     if(!footerBtn || !footerContent) return;
 
@@ -1073,18 +935,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-
-/* =========================
-   FOOTER AWARD TOGGLE
-========================= */
-
 document.addEventListener("DOMContentLoaded", () => {
 
-    const awardBtn =
-        document.querySelector(".award-toggle-btn");
-
-    const awardContent =
-        document.querySelector(".bottom-bottom");
+    const awardBtn = document.querySelector(".award-toggle-btn");
+    const awardContent = document.querySelector(".bottom-bottom");
 
     if(!awardBtn || !awardContent) return;
 
@@ -1098,9 +952,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-const swipeTargets = document.querySelectorAll(
-    '.shop-story-wrap, .best-products-wrap'
-);
+const swipeTargets = document.querySelectorAll('.shop-story-wrap, .best-products-wrap');
 
 swipeTargets.forEach((target) => {
 
@@ -1111,12 +963,8 @@ swipeTargets.forEach((target) => {
     target.addEventListener('mousedown', (e) => {
 
         isDown = true;
-
-        startX =
-            e.pageX - target.offsetLeft;
-
-        scrollLeft =
-            target.scrollLeft;
+        startX = e.pageX - target.offsetLeft;
+        scrollLeft = target.scrollLeft;
 
     });
 
@@ -1138,42 +986,29 @@ swipeTargets.forEach((target) => {
 
         e.preventDefault();
 
-        const x =
-            e.pageX - target.offsetLeft;
+        const x = e.pageX - target.offsetLeft;
+        const walk = (x - startX) * 1.5;
 
-        const walk =
-            (x - startX) * 1.5;
-
-        target.scrollLeft =
-            scrollLeft - walk;
+        target.scrollLeft = scrollLeft - walk;
 
     });
-
-    /* 모바일 터치 */
 
     let touchStartX = 0;
     let touchScroll = 0;
 
     target.addEventListener('touchstart', (e) => {
 
-        touchStartX =
-            e.touches[0].clientX;
-
-        touchScroll =
-            target.scrollLeft;
+        touchStartX = e.touches[0].clientX;
+        touchScroll = target.scrollLeft;
 
     }, { passive:true });
 
     target.addEventListener('touchmove', (e) => {
 
-        const touchX =
-            e.touches[0].clientX;
+        const touchX = e.touches[0].clientX;
+        const move = touchStartX - touchX;
 
-        const move =
-            touchStartX - touchX;
-
-        target.scrollLeft =
-            touchScroll + move;
+        target.scrollLeft = touchScroll + move;
 
     }, { passive:true });
 
