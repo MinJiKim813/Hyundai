@@ -77,169 +77,6 @@
             font-size:16px;
         }
 
-        .model-content{
-            display:none;
-        }
-
-        .model-contents{
-            position:relative;
-            z-index:1;
-        }
-
-        #tab-all:checked ~ .model-contents .all,
-        #tab-2030:checked ~ .model-contents .age2030,
-        #tab-40:checked ~ .model-contents .age40,
-        #tab-50:checked ~ .model-contents .age50{
-            display:block;
-        }
-
-        .tab-menu-wrap{
-            width:100%;
-            margin:0 0 28px;
-        }
-
-        .tab-menu{
-            width:100%;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            flex-wrap:wrap;
-            transform: none;
-            gap: 0;
-        }
-
-        .tab-menu label{
-            position:relative;
-            padding:0 14px;
-            font-size:16px;
-            color:#666;
-            cursor:pointer;
-        }
-
-        .tab-menu label + label::before{
-            content:'';
-            position:absolute;
-            left:0;
-            top:50%;
-            transform:translateY(-50%);
-            width:1px;
-            height:14px;
-            background:#ccc;
-        }
-
-        .model-slide{
-            position:relative;
-            margin-top: 0;
-        }
-
-        .model-content-left{
-            width:100%;
-            max-width:680px;
-            margin:0 auto;
-            position:relative;
-            z-index: 1;
-        }
-
-        .model-content-right{
-            display:none;
-        }
-
-        .model-content-left img{
-            width:100%;
-            display:block;
-        }
-
-        .model-text{
-            margin-top:18px;
-        }
-
-        .model-text strong{
-            font-size:22px;
-            font-weight:700;
-        }   
-
-        .model-slide-wrap{
-            position:relative;
-        }
-
-        .model-prev,
-        .model-next{
-            position:absolute;
-            top:50%;
-            transform:translateY(-50%);
-
-            width:44px;
-            height:44px;
-
-            border:none;
-            background:transparent;
-            cursor:pointer;
-            z-index:10;
-        }
-
-        .model-prev{
-            left:-60px;
-        }
-
-        .model-next{
-            right:-60px;
-        }
-
-        .model-prev::after,
-        .model-next::after{
-            content:'';
-            position:absolute;
-
-            left:50%;
-            top:50%;
-
-            width:18px;
-            height:18px;
-
-            border-top:2px solid #555;
-            border-right:2px solid #555;
-        }
-
-        .model-prev::after{
-            transform:
-                translate(-30%, -50%)
-                rotate(-135deg);
-        }
-
-        .model-next::after{
-            transform:
-                translate(-70%, -50%)
-                rotate(45deg);
-        }
-
-        .model-dots{
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            gap:10px;
-            margin-top:28px;
-        }
-
-        .model-dots button{
-            width:12px;
-            height:12px;
-
-            padding:0;
-            border:none;
-            border-radius:50%;
-
-            background:#d8d8d8;
-
-            appearance:none;
-            -webkit-appearance:none;
-            flex-shrink:0;
-            cursor:pointer;
-        }
-
-        .model-dots button.active{
-            background:#009ad6;
-        }
-
         .elec-car-contents{
             gap:24px;
             align-items:stretch;
@@ -349,22 +186,6 @@
             color:#002c5f;
 
             white-space:nowrap;
-        }
-
-        .elec-car-info ul li a::after{
-            content:'';
-
-            position:absolute;
-            right:-12px;
-            top:50%;
-
-            width:6px;
-            height:6px;
-
-            border-top:2px solid #002c5f;
-            border-right:2px solid #002c5f;
-
-            transform:translateY(-50%) rotate(45deg);
         }
 
         .elec-car-info-img{
@@ -705,186 +526,19 @@
             font-weight:700;
         }
 
-        .brand{
-            padding-top:80px;
-            overflow:hidden;
-            background:#fff;
-            position: relative;
+        .footer-top{
+            padding:24px 20px;
         }
 
-        .brand .inner{
-            padding:0 16px;
+        .top-text{
+            max-width:100%;
+            padding:15px 24px;
         }
 
-        .brand-title{
-            text-align:center;
-            margin-bottom:32px;
+        .footer-bottom{
+            padding:50px 40px;
         }
 
-        .brand-title h2{
-            font-size:56px;
-            font-weight:700;
-            margin-bottom:18px;
-            color:#111;
-        }
-
-        .brand-title p{
-            font-size:18px;
-            line-height:1.7;
-            color:#666;
-        }
-
-        .brand ul{
-            display:flex;
-
-            gap:24px;
-            width: 100%;
-            padding:0;
-            margin:0;
-
-            list-style:none;
-
-            transition:transform .45s ease;
-        }
-
-        .brand ul li{
-            flex:0 0 calc((100vw - 24px) / 2);
-
-            width:calc((100vw - 24px) / 2);
-
-            padding:0;
-
-            box-sizing:border-box;
-        }
-
-        .brand ul li a{
-            display:block;
-            text-decoration:none;
-        }
-
-        .brand ul li img{
-            width:100%;
-            height:auto;
-            aspect-ratio: 1/1;
-
-            object-fit:cover;
-
-            display:block;
-        }
-
-        .brand .overlay{
-            display:none;
-        }
-
-        .brand .text-wrap{
-            position:static;
-
-            opacity:1;
-            transform:none;
-
-            display:block;
-
-            padding-top:14px;
-
-            color:#111;
-            text-align:left;
-        }
-
-        .brand .text-wrap h3{
-            font-size:20px;
-            line-height:1.3;
-            font-weight:700;
-
-            margin-bottom:12px;
-        }
-
-        .brand .text-wrap p{
-            font-size:16px;
-            line-height:1.7;
-
-            color:#555;
-        }
-
-        .brand-prev,
-        .brand-next{
-            position:absolute;
-            top:55%;
-            transform:translateY(-50%);
-
-            width:44px;
-            height:44px;
-
-            border:none;
-            background:rgba(0,0,0,.35);
-
-            z-index:20;
-
-            cursor:pointer;
-        }
-
-        .brand-prev{
-            left:16px;
-        }
-
-        .brand-next{
-            right:16px;
-        }
-
-        .brand-prev::after,
-        .brand-next::after{
-            content:'';
-
-            position:absolute;
-
-            left:50%;
-            top:50%;
-
-            width:12px;
-            height:12px;
-
-            border-top:2px solid #fff;
-            border-right:2px solid #fff;
-        }
-
-        .brand-prev::after{
-            transform:
-                translate(-30%,-50%)
-                rotate(-135deg);
-        }
-
-        .brand-next::after{
-            transform:
-                translate(-70%,-50%)
-                rotate(45deg);
-        }
-
-        .brand-dots{
-            display:flex;
-            justify-content:center;
-            align-items:center;
-
-            gap:10px;
-
-            margin-top:28px;
-        }
-
-        .brand-dots button{
-            width:10px;
-            height:10px;
-
-            padding:0;
-
-            border:none;
-            border-radius:50%;
-
-            background:#d8d8d8;
-
-            cursor:pointer;
-        }
-
-        .brand-dots button.active{
-            background:#009ad6;
-        }
     }
 
     @media (max-width: 768px) {
@@ -915,7 +569,7 @@
             left:0;
             width:100%;
             height:56px;
-            background:#fff;
+            background:transparent;
             z-index:9999;
             border-bottom:1px solid #e5e5e5;
         }
@@ -1162,7 +816,7 @@
         }
 
         .model{
-            padding:70px 0;
+            padding:70px 0 0 0;
             background:#fff;
         }
 
@@ -1177,7 +831,7 @@
 
         .model-title h2{
             font-size:28px;
-            font-weight:800;
+            font-weight:600;
             margin-bottom:10px;
         }
 
@@ -1269,7 +923,7 @@
             display:block;
             margin-top:12px;
             font-size:18px;
-            font-weight:800;
+            font-weight:700;
         }
 
         .model-dots{
@@ -1314,12 +968,13 @@
 
         .elec-car-title {
             padding: 34px 20px 26px;
+            margin-bottom: 0;
             text-align: center;
         }
 
         .elec-car-title h2 {
-            font-size: 24px;
-            font-weight: 800;
+            font-size: 28px;
+            font-weight: 600;
             color: #111;
             margin-bottom: 12px;
         }
@@ -1360,6 +1015,7 @@
         .thumb-cont h3 {
             font-size: 22px;
             font-weight: 800;
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
             margin: 0 0 10px;
         }
 
@@ -1393,7 +1049,7 @@
             display:flex;
             justify-content:space-between;
             align-items:flex-end;
-            gap:16px;
+            gap:4px;
         }
 
         .elec-car-text{
@@ -1403,39 +1059,42 @@
 
         .elec-car-text h3 {
             font-size: 18px;
-            font-weight: 800;
-            margin-bottom: 10px;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 6px;
         }
 
         .elec-car-text p {
             font-size: 14px;
             line-height: 1.6;
             color: #666;
-            margin-bottom: 18px;
+            margin-top: 0;
+            margin-bottom: 7px;
         }
 
         .elec-car-info ul {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            align-items: flex-start;
+            gap: 14px;
             list-style: none;
             padding: 0;
             margin: 0;
+            margin-top: 20px;
+        }
+        .elec-car-info a.line::before {
+            display: none;
         }
 
-        .elec-car-info li::after {
+        .elec-car-info ul li + li::before {
             display: none;
         }
 
         .elec-car-info a {
             color: #002c5f;
             font-size: 15px;
-            font-weight: 700;
+            font-weight: 500;
             text-decoration: none;
-        }
-
-        .elec-car-info a.line::before {
-            display: none;
         }
 
         .elec-car-info-img{
@@ -1446,7 +1105,7 @@
         }
 
         .elec-car-info-img img {
-            width: 110px;
+            width: 90px;
             position: static;
             height: auto;
         }
@@ -1454,7 +1113,7 @@
         .elec-car-right {
             width: 100%;
             overflow: hidden;
-            padding: 18px 0 28px;
+            padding: 18px 0 0;
             background: #fff;
         }
 
@@ -1485,7 +1144,8 @@
             font-size:20px;
             line-height:1.3;
             font-weight:600;
-            margin-bottom:20px;
+            min-height:52px;
+            margin-bottom:12px;
             color:#111;
             white-space:normal;
             overflow:visible;
@@ -1493,11 +1153,11 @@
         }
 
         .nexo-thumb {
-            height: 150px;
+            height: 92px;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 18px 0;
+            margin: 11px 0;
         }
 
         .nexo-thumb img {
@@ -1507,7 +1167,7 @@
         }
 
         .thumb-info {
-            margin-top: 10px;
+            margin-top: 6px;
         }
 
         .info {
@@ -1520,6 +1180,7 @@
         .info strong {
             font-size: 11px;
             color: #111;
+            white-space: nowrap;
         }
 
         .info span {
@@ -1536,10 +1197,10 @@
         .elec-car-right a {
             width: 100%;
             height: 34px;
+            margin-top: auto;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 12px !important;
             background: #002c5f;
             color: #fff !important;
             font-size: 11px;
@@ -1578,17 +1239,18 @@
 
         .trendy-title {
             padding: 0 24px 28px;
+            margin-bottom: 0;
             text-align: center;
         }
 
         .trendy-title h2 {
             font-size: 28px;
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: 14px;
         }
 
         .trendy-title p {
-            font-size: 15px;
+            font-size: 14px;
             line-height: 1.65;
             color: #666;
         }
@@ -1654,13 +1316,13 @@
 
         .shop-title h2{
             font-size:28px;
+            font-weight: 600;
             line-height:1.3;
+            margin-bottom: 14px;
         }
 
         .shop-title p{
-            margin-top:12px;
-
-            font-size:15px;
+            font-size:14px;
             line-height:1.6;
 
             word-break:keep-all;
@@ -1695,7 +1357,7 @@
         }
 
         .shop-story li{
-            width:280px;
+            width:320px;
 
             flex-shrink:0;
 
@@ -1705,7 +1367,7 @@
         .shop-story li a{
             display:block;
 
-            height:300px;
+            height:210px;
 
             position:relative;
         }
@@ -1754,6 +1416,10 @@
             padding:0;
 
             background:none;
+
+            display:flex;
+            flex-wrap:wrap;
+            align-items:baseline;
         }
 
         .view-more h3{
@@ -1768,12 +1434,12 @@
             line-height:1.6;
 
             color:#666;
+
+            flex-basis:100%;
         }
 
         .view-more a{
             display:inline-block;
-
-            margin-top:8px;
 
             font-size:15px;
             font-weight:700;
@@ -1829,25 +1495,19 @@
 
         .rank{
             position:absolute;
-
             top:0;
             left:0;
-
             z-index:10;
         }
 
         .rank span{
             width:34px;
             height:34px;
-
             display:flex;
             justify-content:center;
             align-items:center;
-
             background:#0093c9;
-
             color:#fff;
-
             font-size:20px;
             font-weight:700;
         }
@@ -1886,10 +1546,15 @@
         .brand{
             padding-top:70px;
             overflow: hidden;
+            position: relative;
         }
 
         .brand .inner{
             padding:0 16px;
+        }
+
+        .brand-viewport{
+            overflow: hidden;
         }
 
         .brand-title{
@@ -1897,46 +1562,44 @@
         }
 
         .brand-title h2{
-            font-size:42px;
+            font-size:28px;
             margin-bottom:14px;
         }
 
         .brand-title p{
-            font-size:15px;
+            font-size:14px;
             line-height:1.6;
         }
 
         .brand ul{
             display:flex;
+            flex-wrap:nowrap;      
             gap:0;
             padding:0;
             margin:0;
-
-            list-style:none;
-
-            transition:transform .45s ease;
+            width:100%;
         }
 
         .brand ul li{
             flex:0 0 100%;
-
-            min-width:100%;
             width: 100%;
             padding:0;
         }
 
         .brand ul li a{
             display:block;
+            overflow: hidden;
             text-decoration:none;
         }
 
-        .brand ul li img{
+        .brand ul li a img{
             width:100%;
 
             height:auto;
+            aspect-ratio: 1/1;
 
             display:block;
-
+            transition: none;
             object-fit:cover;
         }
 
@@ -1944,7 +1607,7 @@
             display:none;
         }
 
-        .brand .text-wrap{
+        .brand ul li a .text-wrap{
             position:static;
 
             opacity:1;
@@ -1952,22 +1615,21 @@
 
             display:block;
 
-            padding-top:18px;
+            padding: 15px 0 0 0;
 
             color:#111;
             text-align:left;
         }
 
         .brand .text-wrap h3{
-            font-size:22px;
+            font-size:15px;
             line-height:1.35;
             font-weight:700;
-
             margin-bottom:10px;
         }
 
         .brand .text-wrap p{
-            font-size:15px;
+            font-size:14px;
             line-height:1.6;
 
             color:#555;
@@ -1975,29 +1637,82 @@
 
         .brand-prev,
         .brand-next{
-            top:33%;
+            position:absolute;
+            top:50%;
+            transform:translateY(-50%);
 
             width:38px;
             height:38px;
+
+            border:none;
+            background:rgba(0,0,0,.35);
+
+            z-index:20;
+
+            cursor:pointer;
         }
 
         .brand-prev{
-            left:0;
+            left:16px;
         }
 
         .brand-next{
-            right:0;
+            right:16px;
         }
 
         .brand-prev::after,
         .brand-next::after{
+            content:'';
+            position:absolute;
+
+            left:50%;
+            top:50%;
+
             width:10px;
             height:10px;
+
+            border-top:2px solid #fff;
+            border-right:2px solid #fff;
+        }
+
+        .brand-prev::after{
+            transform:
+                translate(-30%,-50%)
+                rotate(-135deg);
+        }
+
+        .brand-next::after{
+            transform:
+                translate(-70%,-50%)
+                rotate(45deg);
         }
 
         .brand-dots{
-            margin-top:22px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
             gap:8px;
+
+            margin-top:22px;
+        }
+
+        .brand-dots button{
+            width:8px;
+            height:8px;
+
+            padding:0;
+
+            border:none;
+            border-radius:50%;
+
+            background:#d8d8d8;
+
+            cursor:pointer;
+        }
+
+        .brand-dots button.active{
+            background:#009ad6;
         }
 
         .event{
@@ -2015,7 +1730,7 @@
 
         .event-title h2{
             font-size:28px;
-            font-weight:800;
+            font-weight:600;
             margin-bottom:12px;
         }
 
@@ -2148,7 +1863,7 @@
 
         .hyundai-news h2{
             font-size:28px;
-            font-weight:800;
+            font-weight:600;
             line-height:1.3;
             margin-bottom:34px;
         }
@@ -2339,11 +2054,15 @@
         }
 
         .bottom-top-contents ul li a{
-            font-size:15px;
+            font-size:14px;
+            font-weight: 500;
+            letter-spacing: -.6px;
         }
 
         .bottom-top-contents p{
-            font-size:15px;
+            font-size:14px;
+            font-weight: 500;
+            letter-spacing: -.6px;
             line-height:1.6;
         }
 
@@ -2425,10 +2144,12 @@
         }
 
         .bottom-bottom span{
-            margin-left:14px;
+            margin-left:10px;
+            font-weight: 400;
             max-width:none;
             font-size:13px;
             line-height:1.6;
+            letter-spacing: -.4px;
         }
     }
 
@@ -2454,4 +2175,9 @@
         .quick-menu li span{
             font-size: 11px;
         }
+
+        .elec-car-info ul li + li::before {
+            display: none;
+        }
+
     }
